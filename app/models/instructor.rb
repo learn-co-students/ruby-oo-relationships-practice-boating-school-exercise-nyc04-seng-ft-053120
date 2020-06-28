@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Instructor
   attr_reader :name
   @@all = []
@@ -11,7 +13,7 @@ class Instructor
   end
 
   def pass_student(student, test_name)
-    test = BoatingTest.all.find { |test| test.student.first_name == student.first_name && test.test_name == test_name}
+    test = BoatingTest.all.find { |test| test.student.first_name == student.first_name && test.test_name == test_name }
     if test
       test.test_status = 'passed'
     else
@@ -20,7 +22,7 @@ class Instructor
   end
 
   def fail_student(student, test_name)
-    test = BoatingTest.all.find { |test| test.student.first_name == student.first_name && test.test_name == test_name}
+    test = BoatingTest.all.find { |test| test.student.first_name == student.first_name && test.test_name == test_name }
     if test
       test.test_status = 'failed'
     else
