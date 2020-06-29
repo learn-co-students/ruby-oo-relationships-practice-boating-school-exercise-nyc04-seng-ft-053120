@@ -1,4 +1,3 @@
-require 'pry'
 class Student
     attr_reader :first_name
 
@@ -18,10 +17,10 @@ class Student
     end
 
     def self.find_student(name)
-        binding.pry
-        Student.all.find do |student_object| 
-        student_object.first_name == name
+        student = Student.all.find do |student_object| 
+            student_object.first_name == name
         end
+        student
     end
 
 end
