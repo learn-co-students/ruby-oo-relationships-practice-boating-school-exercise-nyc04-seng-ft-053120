@@ -2,7 +2,7 @@ class BoatingTest
 
     attr_accessor :student, :boat, :instructor, :status
 
-   @@all = []
+    @@all = []
 
     def initialize(student, boat, instructor, status) 
         @student = student

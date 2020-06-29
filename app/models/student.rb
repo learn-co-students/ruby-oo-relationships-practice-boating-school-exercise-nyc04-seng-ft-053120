@@ -3,7 +3,7 @@ class Student
 
     @@all = []
 
-    def initialize(name)
+    def initialize(first_name)
         @first_name = first_name
         @@all << self
     end
@@ -13,11 +13,11 @@ class Student
     end
 
     def add_boating_test
-        Boatingtest.new(student, boat, instructor, status)
+        Boatingtest.new(student, boat, status, instructor)
     end
 
     def self.find_student(first_name)
-        
+
     end
 
 end
