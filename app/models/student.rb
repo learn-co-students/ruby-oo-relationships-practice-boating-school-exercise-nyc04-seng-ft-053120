@@ -1,3 +1,4 @@
+require 'pry'
 class Student
     attr_reader :first_name
 
@@ -16,8 +17,11 @@ class Student
         Boatingtest.new(student, boat, status, instructor)
     end
 
-    def self.find_student(first_name)
-
+    def self.find_student(name)
+        binding.pry
+        Student.all.find do |student_object| 
+        student_object.first_name == name
+        end
     end
 
 end
